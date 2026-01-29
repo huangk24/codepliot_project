@@ -1,0 +1,16 @@
+{
+  "name": "chatroom",
+  "version": "1.0.0",
+  "description": "Simple real-time chatroom with register/login",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/run-tests.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2",
+    "socket.io-client": "^4.7.2"
+  }
+}

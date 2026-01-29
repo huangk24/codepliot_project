@@ -1,0 +1,7 @@
+Server running on http://localhost:3000
+unreadCounts for u_bob now [ [ 'u_alice', 1 ] ]
+unreadCounts for bbb now [ [ 'aaa', 1 ] ]
+unreadCounts for bbb now [ [ 'aaa', 2 ] ]
+unreadCounts for bbb now [ [ 'aaa', 3 ] ]
+unreadCounts for bbb now [ [ 'aaa', 4 ] ]
+unreadCounts for aaa now [ [ 'bbb', 1 ] ]

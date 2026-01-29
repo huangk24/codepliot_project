@@ -1,0 +1,267 @@
+{
+  "users": [
+    {
+      "username": "aaa",
+      "passwordHash": "$2a$10$UXCGmWCtOcBhEtUe5hvL9elw9ieKbNJTo8ZLjJrKyYW5KURmdmGq."
+    },
+    {
+      "username": "bbb",
+      "passwordHash": "$2a$10$xEVdueKxtDQWc77ohzUH0OQm.PUZONKioQgc8/nyHx.7bbCBYpOzC"
+    },
+    {
+      "username": "t_1769411593651",
+      "passwordHash": "$2a$10$4YflG9p0noTSIdSX9TnFP.ivaFEDFpBfFMdqCYGTuVTbkgikmXZke"
+    },
+    {
+      "username": "t_1769411598185",
+      "passwordHash": "$2a$10$wDzd8ggpD8.eTK0zbjvqJuCQGR4tDhb/Fntq22znvbWbCcv.6ziqC"
+    },
+    {
+      "username": "t_1769411845489",
+      "passwordHash": "$2a$10$WE2bOB.1FVhOBcQCtbxV6uQXHbT3go56okyQPxv/zUM1e29f7ngFq"
+    },
+    {
+      "username": "t_1769411850048",
+      "passwordHash": "$2a$10$Gu38ByQmZXroDGEtWhc8reQTGEN5rTf/AOXG.q0YdIGVR5DZ9UENu"
+    },
+    {
+      "username": "ccc",
+      "passwordHash": "$2a$10$yFWTejnApY54TmtYUot0FuJYnJW9toB1Uw2iq1DypUbzdIjT21PLW"
+    },
+    {
+      "username": "ddd",
+      "passwordHash": "$2a$10$fp4nS8nFEvmRUgCd5udAC.OBoUw7CFmXKhHKzwWZzzwufXrCBJYVC"
+    },
+    {
+      "username": "test_alice",
+      "passwordHash": "$2a$10$ZhCu0m9yQ9xwz0.vTYVAu.0MRMwLR3sJNM5nGOE5nWKaTFePBtzh6"
+    },
+    {
+      "username": "test_bob",
+      "passwordHash": "$2a$10$YY6G0ZI1U4BptudThsyLDeVnb5uLIZJVsz3VBe8H9eaYcDCwKN/hq"
+    },
+    {
+      "username": "u_alice",
+      "passwordHash": "$2a$10$KSeByvTSgZnX7a3ipZadTeYb5CIx1aUCk8UJ79E0HiMBMs5c5KFf6"
+    },
+    {
+      "username": "u_bob",
+      "passwordHash": "$2a$10$7KupJWhVDaxzxMCrSyPf8u454rbdad3SQ88xJJIzTH9B6GD6l6cM6"
+    },
+    {
+      "username": "eee",
+      "passwordHash": "$2a$10$rHb5Q6JoOQIhpr422ZAONenPgFUhohHmDP.2Hih5.3HActOMVrTIS"
+    }
+  ],
+  "messages": [
+    {
+      "username": "aaa",
+      "text": "11",
+      "time": "2026-01-26T07:06:52.438Z"
+    },
+    {
+      "username": "aaa",
+      "text": "22",
+      "time": "2026-01-26T07:06:53.536Z"
+    },
+    {
+      "username": "socket_t_1769411845655",
+      "text": "integration-test-1769411845672",
+      "time": "2026-01-26T07:17:25.672Z"
+    },
+    {
+      "username": "socket_t_1769411850222",
+      "text": "integration-test-1769411850241",
+      "time": "2026-01-26T07:17:30.241Z"
+    },
+    {
+      "username": "ccc",
+      "text": "123",
+      "time": "2026-01-26T07:27:55.271Z"
+    },
+    {
+      "username": "bbb",
+      "text": "222",
+      "time": "2026-01-26T07:27:58.943Z"
+    },
+    {
+      "username": "aaa",
+      "text": "aaass",
+      "time": "2026-01-26T07:53:59.266Z"
+    },
+    {
+      "private": true,
+      "participants": [
+        "test_alice",
+        "test_bob"
+      ],
+      "from": "test_alice",
+      "to": "test_bob",
+      "text": "hello bob from alice",
+      "time": "2026-01-26T08:14:25.403Z"
+    },
+    {
+      "private": true,
+      "participants": [
+        "test_alice",
+        "test_bob"
+      ],
+      "from": "test_alice",
+      "to": "test_bob",
+      "text": "hello bob from alice",
+      "time": "2026-01-26T08:15:55.418Z"
+    },
+    {
+      "private": true,
+      "participants": [
+        "aaa",
+        "bbb"
+      ],
+      "from": "aaa",
+      "to": "bbb",
+      "text": "21",
+      "time": "2026-01-26T08:16:52.762Z"
+    },
+    {
+      "private": true,
+      "participants": [
+        "bbb",
+        "aaa"
+      ],
+      "from": "bbb",
+      "to": "aaa",
+      "text": "222",
+      "time": "2026-01-26T08:17:05.539Z"
+    },
+    {
+      "private": true,
+      "participants": [
+        "u_alice",
+        "u_bob"
+      ],
+      "from": "u_alice",
+      "to": "u_bob",
+      "text": "hi bob unread test",
+      "time": "2026-01-26T08:21:37.211Z"
+    },
+    {
+      "private": true,
+      "participants": [
+        "u_alice",
+        "u_bob"
+      ],
+      "from": "u_alice",
+      "to": "u_bob",
+      "text": "hi bob unread test",
+      "time": "2026-01-26T08:22:22.225Z"
+    },
+    {
+      "private": true,
+      "participants": [
+        "aaa",
+        "bbb"
+      ],
+      "from": "aaa",
+      "to": "bbb",
+      "text": "111",
+      "time": "2026-01-26T08:23:02.385Z"
+    },
+    {
+      "private": true,
+      "participants": [
+        "aaa",
+        "bbb"
+      ],
+      "from": "aaa",
+      "to": "bbb",
+      "text": "21121",
+      "time": "2026-01-26T08:23:18.175Z"
+    },
+    {
+      "private": true,
+      "participants": [
+        "aaa",
+        "bbb"
+      ],
+      "from": "aaa",
+      "to": "bbb",
+      "text": "hi",
+      "time": "2026-01-26T08:26:38.579Z"
+    },
+    {
+      "private": true,
+      "participants": [
+        "aaa",
+        "bbb"
+      ],
+      "from": "aaa",
+      "to": "bbb",
+      "text": "how are u",
+      "time": "2026-01-26T08:26:41.347Z"
+    },
+    {
+      "username": "bbb",
+      "text": "good",
+      "time": "2026-01-26T08:29:05.608Z"
+    },
+    {
+      "username": "bbb",
+      "text": "what about u",
+      "time": "2026-01-26T08:29:08.640Z"
+    },
+    {
+      "username": "aaa",
+      "text": "good",
+      "time": "2026-01-26T08:29:44.333Z"
+    },
+    {
+      "private": true,
+      "participants": [
+        "bbb",
+        "aaa"
+      ],
+      "from": "bbb",
+      "to": "aaa",
+      "text": "goo",
+      "time": "2026-01-26T08:30:10.118Z"
+    },
+    {
+      "private": true,
+      "participants": [
+        "bbb",
+        "aaa"
+      ],
+      "from": "bbb",
+      "to": "aaa",
+      "text": "test test",
+      "time": "2026-01-27T05:12:33.866Z"
+    },
+    {
+      "private": true,
+      "participants": [
+        "bbb",
+        "aaa"
+      ],
+      "from": "bbb",
+      "to": "aaa",
+      "text": "123123",
+      "time": "2026-01-27T05:12:35.455Z"
+    },
+    {
+      "private": true,
+      "participants": [
+        "aaa",
+        "bbb"
+      ],
+      "from": "aaa",
+      "to": "bbb",
+      "text": "yes",
+      "time": "2026-01-27T05:12:51.988Z"
+    },
+    {
+      "username": "eee",
+      "text": "Hi everyone",
+      "time": "2026-01-27T05:13:13.345Z"
+    }
+  ]
+}

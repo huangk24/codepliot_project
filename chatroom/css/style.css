@@ -1,0 +1,135 @@
+:root{--bg:#f6f8fb;--card:#fff;--accent:#2b7cff;--muted:#666}
+*{box-sizing:border-box;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
+body{margin:0;background:var(--bg);color:#111}
+.container{max-width:820px;margin:40px auto;padding:0 16px}
+.card{background:var(--card);padding:16px;border-radius:8px;margin:12px 0;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+h1{margin:0 0 12px}
+form{display:flex;flex-direction:column;gap:8px}
+input{padding:8px 10px;border:1px solid #ddd;border-radius:6px}
+button{background:var(--accent);color:#fff;border:0;padding:10px;border-radius:6px;cursor:pointer}
+.msg{color:var(--muted);font-size:0.9rem;margin-top:6px}
+
+.bg-gradient{
+	background: radial-gradient(circle at 10% 10%, #ffecd2 0%, #fcb69f 20%, #f7776b 40%, #c471ed 70%, #6a5cff 100%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;800&display=swap');
+
+:root{
+	--bg: linear-gradient(180deg, #faf3ff 0%, #fff 40%);
+	--card: rgba(255,255,255,0.85);
+	--muted: #6b7280;
+	--accent-start: #f58529; /* warm */
+	--accent-end: #dd2a7b;   /* pink */
+	--accent-2: #833ab4;     /* purple */
+	--glass: rgba(255,255,255,0.6);
+}
+
+*{box-sizing:border-box;font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+body{
+	margin:0;
+	background: radial-gradient(circle at 10% 10%, rgba(255,230,230,0.6), transparent 20%), linear-gradient(180deg,#fff,#fff);
+	color:#111;
+	-webkit-font-smoothing:antialiased;
+}
+
+.container{max-width:820px;margin:36px auto;padding:0 16px}
+.card{
+	background: var(--card);
+	padding:18px;border-radius:14px;margin:18px 0;
+	box-shadow: 0 6px 30px rgba(99,102,241,0.12);
+	border: 1px solid rgba(255,255,255,0.6);
+}
+
+/* center and reduce size for auth pages (login/register) */
+.auth-center{ /* center auth content exactly in viewport under navbar and prevent page scroll */
+	position:fixed;
+	top:72px; /* leave space for sticky navbar */
+	left:0;right:0;bottom:0;
+	display:flex;align-items:center;justify-content:center;padding:24px;overflow:hidden;
+	z-index: 50;
+}
+.auth-center .card{max-width:420px;width:100%;padding:22px;border-radius:16px;margin:0}
+.auth-center h1{font-size:1.4rem;text-align:center;margin-bottom:10px}
+
+/* ensure the whole app uses the full viewport */
+.chat-container{max-width:980px;margin:18px auto;background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.7));padding:18px;border-radius:18px;display:flex;flex-direction:column;height:100vh;border:1px solid rgba(0,0,0,0.04);box-shadow:0 12px 40px rgba(99,102,241,0.08)}
+
+h1{margin:0 0 12px; font-weight:800; letter-spacing:-0.5px}
+
+form{display:flex;flex-direction:column;gap:10px}
+input{
+	padding:12px 14px;border-radius:12px;border:1px solid rgba(15,23,42,0.06);
+	background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,250,250,0.8));
+	outline:none;transition:box-shadow .18s, transform .08s;
+}
+input:focus{box-shadow:0 8px 24px rgba(139,92,246,0.12);transform:translateY(-1px);border-color:rgba(131,58,180,0.6)}
+
+button{background:linear-gradient(90deg,var(--accent-start),var(--accent-end));color:#fff;border:0;padding:12px;border-radius:12px;cursor:pointer;font-weight:700;box-shadow:0 8px 20px rgba(237,73,108,0.14);transition:transform .12s, box-shadow .12s}
+button:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(237,73,108,0.18)}
+
+.msg{color:var(--muted);font-size:0.9rem;margin-top:6px}
+
+.chat-container{max-width:980px;margin:18px auto;background:linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.7));padding:18px;border-radius:18px;display:flex;flex-direction:column;height:82vh;border:1px solid rgba(0,0,0,0.04);box-shadow:0 12px 40px rgba(99,102,241,0.08)}
+
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+header h1{font-size:1.25rem}
+
+#who{padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,var(--accent-2),var(--accent-end));color:white;font-weight:700}
+
+.messages{list-style:none;padding:12px;margin:0;overflow:auto;flex:1;border-radius:12px;background:linear-gradient(180deg, rgba(249,250,251,0.6), rgba(255,255,255,0.4));display:flex;flex-direction:column;gap:10px}
+.messages li{padding:12px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));box-shadow:0 6px 18px rgba(15,23,42,0.04);max-width:78%}
+
+.messages li.self{background:linear-gradient(90deg, rgba(131,58,180,0.12), rgba(221,42,123,0.08));align-self:flex-end;text-align:right}
+
+.msgForm{display:flex;gap:12px;padding-top:12px}
+.msgForm input{flex:1;padding:12px;border-radius:12px}
+
+.meta{font-size:0.75rem;color:var(--muted);margin-bottom:6px}
+
+/* small responsive */
+@media (max-width:600px){
+	.container{margin:18px 12px}
+	.chat-container{height:86vh;padding:12px}
+}
+
+.chat-container{max-width:900px;margin:12px auto;background:var(--card);padding:12px;border-radius:8px;display:flex;flex-direction:column;height:80vh}
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.chat-container header button,#index-to-register button{background:#ef4444}
+.messages{list-style:none;padding:8px;margin:0;overflow:auto;flex:1;border-top:1px solid #eee;border-bottom:1px solid #eee}
+.messages li{padding:8px;border-radius:6px;margin-bottom:8px;background:#fafafa}
+.msgForm{display:flex;gap:8px;padding-top:8px}
+.msgForm input{flex:1}
+
+.meta{font-size:0.75rem;color:var(--muted);margin-top:6px}
+
+/* Users sidebar and layout fixes */
+.chat-container > .d-flex { flex: 1 1 auto; min-height: 0; }
+.chat-container aside { width: 220px; flex: 0 0 220px; }
+.chat-container aside .card { height: 100%; overflow: auto; padding: 12px; }
+.chat-container #usersList { padding-left: 0; margin: 0; }
+.chat-container #usersList li { margin-bottom: 10px; }
+.chat-container #usersList .badge { display: inline-block; font-weight:600; }
+
+/* unread pill next to username */
+.unread-pill{display:inline-block;min-width:20px;padding:2px 6px;border-radius:999px;background:#ef4444;color:white;font-size:0.75rem;text-align:center;font-weight:700}
+
+/* layout for user rows: left pill + username */
+.chat-container #usersList li{display:flex;align-items:center;justify-content:flex-start;padding:6px 8px;border-radius:8px}
+.chat-container #usersList li:hover{background:linear-gradient(90deg, rgba(131,58,180,0.03), rgba(221,42,123,0.02));}
+.chat-container #usersList .unread-pill{margin-left:auto}
+.chat-container #usersList .spacer{margin-left:auto;min-width:20px}
+.chat-container #usersList .badge{flex:0 0 auto}
+
+.status-wrap{display:flex;align-items:center;gap:4px;min-width:64px;color:#555;font-size:0.85rem}
+.status-dot{width:9px;height:9px;border-radius:50%;display:inline-block;border:1px solid rgba(0,0,0,0.08)}
+.status-dot.online{background:#16a34a;box-shadow:0 0 0 2px rgba(22,163,74,0.18)}
+.status-dot.offline{background:#d1d5db;box-shadow:0 0 0 2px rgba(209,213,219,0.3)}
+.status-text{color:#555;font-size:0.85rem}
+
+/* back button small styling */
+#backBtn{font-weight:600}
+
+/* Ensure messages area can shrink and scroll properly */
+.chat-container section { display:flex; flex-direction:column; min-height: 0; }
+.chat-container .messages { min-height: 0; }

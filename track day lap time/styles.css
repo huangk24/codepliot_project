@@ -1,0 +1,107 @@
+/* Racing-themed styles for Track Day Lap Time Tracker */
+:root{
+  --bg:#ffffff; /* page background */
+  --panel:#ffffff; /* light panel */
+  --accent:#d62828; /* deeper racing red for stronger contrast */
+  --accent-2:#ffb703; /* brighter gold */
+  --muted:#4b5563; /* darker muted text for readability */
+  --text:#0b0b0d; /* primary text color */
+  --panel-border: rgba(11,11,13,0.12); /* stronger border for contrast */
+  --elev-1: 0 10px 30px rgba(11,11,13,0.10);
+}
+*{box-sizing:border-box}
+body{font-family:'Orbitron',ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;margin:0;background:var(--bg);color:var(--text)}
+header{padding:18px 0;border-bottom:1px solid var(--panel-border);background:transparent}
+header h1{margin:0;font-size:22px;letter-spacing:0.6px}
+.subtitle{margin:4px 0 0;color:var(--muted)}
+main{max-width:1100px;margin:20px auto;padding:0 16px}
+.view{background:var(--panel);padding:18px;border-radius:10px;box-shadow:var(--elev-1);border:1px solid var(--panel-border)}
+.hidden{display:none}
+.toolbar{display:flex;gap:8px;align-items:center;margin-bottom:12px}
+#search{flex:1;padding:10px;border-radius:8px;border:1px solid var(--panel-border);background:#ffffff;color:var(--text)}
+#search::placeholder{color:var(--muted)}
+#search:focus{outline:2px solid rgba(255,59,48,0.12);box-shadow:0 0 0 4px rgba(255,59,48,0.06)}
+button{background:var(--accent);color:white;border:0;padding:8px 12px;border-radius:6px;cursor:pointer;box-shadow:0 4px 12px rgba(255,59,48,0.12)}
+button[disabled]{opacity:0.6}
+.track-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.track-item{padding:0;border-radius:10px;background:var(--panel);border:1px solid var(--panel-border);display:flex;flex-direction:column;gap:0;overflow:hidden}
+.track-item .card-body{padding:14px}
+.track-title{font-weight:700;color:var(--text)}
+.track-item .card-body{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));}
+.muted{color:var(--muted)}
+.stats{display:flex;gap:18px;margin:12px 0}
+.track-media{display:flex;gap:14px;align-items:flex-start;margin:12px 0}
+/* Detail view image: fixed frame so all images render at the same size. */
+#track-image{width:420px;height:260px;border-radius:10px;border:2px solid var(--panel-border);object-fit:contain;flex:0 0 420px;background:#ffffff;display:block}
+
+/* Special handling for SVG (or SVG-derived) images which are often dark-line drawings
+   on transparent backgrounds: give them a light plate and contain scaling so the
+   drawings are visible against the dark app background. We match both .svg and
+   files that end in .svg.png (exported previews). */
+#track-image[src$=".svg"],
+#track-image[src$=".svg"],
+#track-image[src$=".svg.png"],
+.track-thumb[src$=".svg"],
+.track-thumb[src$=".svg.png"]{
+  background:#ffffff; /* white plate for line-drawings */
+  padding:10px; /* space around the drawing */
+  object-fit:contain; /* show entire drawing */
+  box-shadow:0 10px 36px rgba(11,11,13,0.12), inset 0 0 0 1px rgba(0,0,0,0.04);
+  border-radius:8px;
+}
+
+/* Prefer JS-applied classes for reliable matching across encoded URLs */
+#track-image.is-svg, #track-image.is-svg-png{
+  background:#ffffff; /* plate */
+  padding:10px;
+  object-fit:contain;
+  box-shadow:0 10px 36px rgba(11,11,13,0.12), inset 0 0 0 1px rgba(0,0,0,0.04);
+  border-radius:8px;
+  filter:contrast(1.35) brightness(1.08) saturate(1.06);
+}
+
+#track-image.is-svg-png{ /* exported svg previews may need slightly different gamma */
+  filter:contrast(1.4) brightness(1.03) saturate(1.03);
+}
+
+/* Thumbnail placeholder for list items (if thumbnails are added later) */
+.track-thumb{width:100%;aspect-ratio:21/13;height:auto;object-fit:cover;border-bottom:1px solid var(--panel-border);background:#f4f5f7;border-radius:6px}
+.track-meta{display:flex;flex-direction:column;gap:6px}
+.upload-form{display:flex;gap:8px;align-items:center;margin:12px 0}
+.upload-form input{padding:8px;border-radius:6px;border:1px solid var(--panel-border);background:#fff;color:var(--text)}
+.upload-form input::placeholder{color:var(--muted)}
+.upload-form input:focus{outline:2px solid rgba(255,213,102,0.12);box-shadow:0 0 0 4px rgba(255,213,102,0.04)}
+.laps-table{width:100%;border-collapse:collapse;background:transparent}
+.laps-table thead th{background:transparent;color:var(--text);padding:12px;border-bottom:1px solid rgba(11,11,13,0.08)}
+.laps-table th,.laps-table td{padding:10px;text-align:left;border-bottom:1px solid rgba(11,11,13,0.06);color:var(--text)}
+.laps-table tbody tr:hover{background:rgba(11,11,13,0.04)}
+.laps-table tbody tr.lap-user{background:linear-gradient(90deg, rgba(255,179,0,0.08), rgba(214,40,40,0.04));}
+.laps-table tbody tr.lap-user td{font-weight:700}
+.track-location-small{color:var(--muted)}
+.badge.bg-danger{background:var(--accent)!important}
+.btn-dark{background:#111!important;color:#fff}
+.track-item:hover{transform:translateY(-4px);transition:transform .18s ease;box-shadow:0 12px 38px rgba(11,11,13,0.14)}
+.display-6{font-size:1.5rem}
+@media (max-width:600px){.track-list{grid-template-columns:1fr}}
+
+/* subtle racetrack stripe for header */
+.header-stripe{background-image:repeating-linear-gradient(45deg, rgba(11,11,13,0.02) 0 8px, transparent 8px 16px)}
+
+/* increase contrast for small muted labels */
+.muted{color:var(--muted)!important}
+
+/* Simple modal styles (minimal, accessible enough for a demo) */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.15);z-index:1200}
+.modal-content{background:var(--panel);padding:18px;border-radius:10px;min-width:280px;max-width:520px;width:90%;box-shadow:0 10px 40px rgba(11,11,13,0.06);border:1px solid var(--panel-border);color:var(--text)}
+.modal-content h4{margin:0 0 8px;font-size:1.1rem}
+.modal-content label{display:block;margin-top:8px;color:var(--muted);font-size:0.9rem}
+.modal-content .form-control{margin-top:6px;background:#fff;border:1px solid var(--panel-border);color:var(--text)}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+
+/* Toast notifications */
+#toast-container{position:fixed;right:20px;bottom:20px;z-index:2200;display:flex;flex-direction:column;gap:8px}
+.toast{min-width:220px;max-width:360px;padding:10px 14px;border-radius:8px;background:#111;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);opacity:0;transform:translateY(12px);transition:opacity .25s ease,transform .25s ease;font-size:0.95rem}
+.toast.show{opacity:1;transform:translateY(0)}
+.toast.success{background:linear-gradient(90deg,#1d9a6c,#2ecc71);color:#04210b}
+.toast.error{background:linear-gradient(90deg,#ff6b6b,#ff4d4f);color:#2b0000}
+.toast.info{background:linear-gradient(90deg,#4aa3ff,#6ec6ff);color:#022536}
